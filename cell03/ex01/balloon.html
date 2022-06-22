@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            button {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                border-radius: 50%;
+                border: 0;
+                cursor: pointer;
+            }
+        </style>
         <title>Balloon</title>
     </head>
     <body>
-        
+        <button></button>
+        <script>
+            let btn = document.getElementsByTagName("button")[0];
+
+            btn.addEventListener("click", function() {
+                btn.style.width = btn.clientWidth + 10 + "px";
+                btn.style.height = btn.clientHeight + 10 + "px";
+
+                // if (btn.style.backgroundColor === "red") {
+                //     btn.style.backgroundColor = "green";
+                // } else if (btn.style.backgroundColor === "green") {
+                //     btn.style.backgroundColor = "blue";
+                // } else if (btn.style.backgroundColor === "blue") {
+                //     btn.style.backgroundColor = "red";
+                // }
+            });
+        </script>
     </body>
 </html>
