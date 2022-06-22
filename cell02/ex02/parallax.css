@@ -1,0 +1,60 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    color: #777;
+}
+
+.img1, .img2 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img1 {
+    background-image: url(https://wallpaperaccess.com/full/31193.jpg);
+    min-height: 100%;
+}
+
+.img2 {
+    background-image: url(https://i.pinimg.com/originals/2e/dc/06/2edc0680c0d2a34299ba46be7707b2fb.jpg);
+    min-height: 100%;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.caption span {
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+
+}
+
+.caption span.border1 {
+    background-color: black;
+    color: white;
+}
+
+.caption span.border2 {
+    background-color: white;
+    color: black;
+}
+
+.black {
+    position: relative;
+    padding: 400px 400px;
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}

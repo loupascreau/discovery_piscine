@@ -1,0 +1,24 @@
+table {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 100vh;
+	border-collapse: collapse;
+}
+
+td {
+	text-align: center;
+	color: white;
+	font-size: 25px;
+}
+
+.left {
+	background-color: #357F71;
+}
+
+.right {
+	background-color: #EB843A;
+}

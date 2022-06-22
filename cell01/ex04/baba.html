@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				background-color: pink;
+			}
+			h1 {
+				color: white;
+				text-align: center;
+			}
+			.container {
+				display: flex;
+				justify-content: center;
+			}
+
+			figcaption {
+				text-align: center;
+			}
+
+			footer {
+				border-top: solid;
+				border-top-color: steelblue;
+				font-style: italic;
+				font-family: monospace;
+				text-align: right;
+			}
+
+		</style>
+		<title>B.A.BA</title>
+	</head>
+	<body>
+		<h1>On va à la pêche</h1>
+		<div class="container">
+			<figure>
+				<img src="data:image/png;base64,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" alt="logo" width="600">
+				<figcaption>
+					<a href="https://www.amazon.fr/">Amazon</a>
+				</figcaption>
+			</figure>
+			<figure>
+				<img src="https://global.rakuten.com/corp/assets/img/common/og_image_logo.gif" alt="rakuten" width="600">
+				<figcaption>
+					<a href="https://fr.shopping.rakuten.com/">Rakuten</a>
+				</figcaption>
+			</figure>
+		</div>
+	</body>
+	<footer>
+		<p>© lpascrea 2022</p>
+	</footer>
+</html>
