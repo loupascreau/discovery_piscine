@@ -2,7 +2,7 @@
 <html>
     <head>
         <style>
-            button {
+            div {
                 width: 200px;
                 height: 200px;
                 background-color: red;
@@ -14,22 +14,55 @@
         <title>Balloon</title>
     </head>
     <body>
-        <button></button>
+        <div id="btn" onmouseleave="mouseLeave()"></div>
+        
         <script>
-            let btn = document.getElementsByTagName("button")[0];
+
+            let btn = document.getElementById("btn");
 
             btn.addEventListener("click", function() {
                 btn.style.width = btn.clientWidth + 10 + "px";
                 btn.style.height = btn.clientHeight + 10 + "px";
 
-                // if (btn.style.backgroundColor === "red") {
-                //     btn.style.backgroundColor = "green";
-                // } else if (btn.style.backgroundColor === "green") {
-                //     btn.style.backgroundColor = "blue";
-                // } else if (btn.style.backgroundColor === "blue") {
-                //     btn.style.backgroundColor = "red";
-                // }
+                var size = btn.clientWidth;
+
+                if (size > 420) {
+                    btn.style.width = 200 + "px";
+                    btn.style.height = 200 + "px";
+                }
+
+                var color = window.getComputedStyle(btn, null).getPropertyValue("background-color");
+
+                if (color === "rgb(255, 0, 0)") {
+                    btn.style.backgroundColor = "rgb(0, 128, 0)";
+                } else if (color === "rgb(0, 128, 0)") {
+                    btn.style.backgroundColor = "rgb(0, 0, 255)";
+                } else if (color === "rgb(0, 0, 255)") {
+                    btn.style.backgroundColor = "rgb(255, 0, 0)";
+                }
             });
+
+            function mouseLeave() {
+                let bal = document.getElementById("btn");
+
+                var size = bal.clientWidth;
+
+                if (size > 200) {
+                    btn.style.width = bal.clientWidth - 5 + "px";
+                    btn.style.height = bal.clientHeight - 5 + "px";
+                }
+
+                var color = window.getComputedStyle(bal, null).getPropertyValue("background-color");
+
+                if (color === "rgb(0, 0, 255)") {
+                    bal.style.backgroundColor = "rgb(0, 128, 0)";
+                } else if (color === "rgb(0, 128, 0)") {
+                    bal.style.backgroundColor = "rgb(255, 0, 0)";
+                } else if (color === "rgb(255, 0, 0)") {
+                    bal.style.backgroundColor = "rgb(0, 0, 255)";
+                }
+            }
+            
         </script>
     </body>
 </html>
