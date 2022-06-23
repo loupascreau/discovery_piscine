@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculatrice</title>
+    </head>
+    <body>
+        <input type="text" id="left">
+        <select name="operators" id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="right">
+        <input type="submit" id="submit" value="Try me!">
+
+        <script>
+            function checkValues(left, right) {
+                if ((!isNaN(left) && left >= 0) && (!isNaN(right) && right >= 0)) {
+                    return true;
+                }
+                return false;
+            }
+
+            function getResult(left, operator, right) {
+                switch (operator) {
+                    case "+" :
+                        return left + right;
+                    case "-" :
+                        return left - right;
+                    case "*" :
+                        return left * right;
+                    case "/" :
+                        return left / right;
+                    case "%" :
+                        return left % right;
+                }
+            }
+            
+            let btn = document.getElementById("submit");
+            
+            btn.addEventListener("click", function() {
+
+                let left = +document.getElementById("left").value;
+                let right = +document.getElementById("right").value;
+                let operator = document.getElementById("operators").value;
+
+                if (!checkValues(left, right)) {
+                    console.log("Error :(");
+                    alert("Error :(");
+                } else if ((operator === "/" || operator === "%") && right === 0) {
+                    console.log("It’s over 9000!");
+                    alert("It’s over 9000!");
+                } else {
+                    let result = getResult(left, operator, right);
+                    
+                    console.log(result);
+                    alert(result);
+                }
+            });
+
+            setInterval(function () {
+                alert("Please, use me...");
+            }, 30000);
+            </script>
+    </body>
+</html>
