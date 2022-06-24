@@ -2,8 +2,37 @@
 <html>
     <head>
         <title>toDo List</title>
+        <script type="text/javascript" src="./todo.js" defer></script>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            button {
+                width: 200px;
+                margin: auto;
+                padding: 10px;
+                font-size: 18px;
+            }
+
+            .toDo {
+                width: 100%;
+                background-color:cadetblue;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                font-family: monospace;
+                font-size: 20px;
+                border: 1px white solid;
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body>
-        
+       <div id="ft_list">
+       </div>
+       <button onclick="newToDo()">New</button>
     </body>
 </html>
