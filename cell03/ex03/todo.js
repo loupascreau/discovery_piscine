@@ -15,7 +15,7 @@ function storeCookies(array) {
     let jsonStr = "";
     
     jsonStr = JSON.stringify(array);
-    document.cookie = jsonStr + "; SameSite=None; Secure";
+    document.cookie = jsonStr + "; SameSite=None; Secure; ";
 }
 
 function addToDo(toDo) {
@@ -36,9 +36,11 @@ function newToDo() {
 }
 
 list.addEventListener("click", function(event) {
-    if (event.target.className === "toDo") {
-        array.splice(array.indexOf(event.target.innerText), 1);
-        list.removeChild(event.target);
-        storeCookies(array);
+    if (confirm("Are you sure you want delete this ToDO ?") == true) {
+        if (event.target.className === "toDo") {
+            array.splice(array.indexOf(event.target.innerText), 1);
+            list.removeChild(event.target);
+            storeCookies(array);
+        }
     }
 });
