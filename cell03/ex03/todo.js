@@ -2,11 +2,13 @@ let list = document.getElementById("ft_list");
 let array = [];
 let arrayCookies = [];
 
-var cookies = document.cookie;
-console.log("Cookies list : " + cookies);
-if (cookies.length > 0) {
-    arrayCookies = JSON.parse(cookies);
-    for (var i in arrayCookies) {
+let retCookies = document.cookie;
+let splitCookies = document.cookie.split(";");
+console.log("Cookies list : " + retCookies);
+console.log("Cookies split : " + splitCookies[0]);
+if (splitCookies[0][0] === '[') {
+    arrayCookies = JSON.parse(splitCookies[0]);
+    for (let i in arrayCookies) {
         addToDo(arrayCookies[i]);
     }
 }
@@ -14,8 +16,10 @@ if (cookies.length > 0) {
 function storeCookies(array) {
     let jsonStr = "";
     
+    console.log(array);
     jsonStr = JSON.stringify(array);
-    document.cookie = jsonStr + "; SameSite=None; Secure; ";
+    let expire_date = (new Date(Date.now()+ 2 * 24 * 60 * 60 * 1000)).toUTCString();
+    document.cookie = jsonStr + ";expires=" + expire_date + "; SameSite=None; Secure; ";
 }
 
 function addToDo(toDo) {
