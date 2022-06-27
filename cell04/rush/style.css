@@ -1,7 +1,3 @@
-header {
-    background: transparent;
-}
-
 .navbar ul {
     list-style: none;
     display: flex;
@@ -32,7 +28,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.85;
+    opacity: 0.86;
 }
 
 #hero .hero-container {
@@ -49,8 +45,24 @@ header {
     color: white;
 }
 
-#about, #experiences {
+#about, #experiences, #contact, footer {
     background-color: black;
     opacity: 0.86;
     color: white;
+}
+
+.title {
+    border-top: 1px chartreuse solid;
+    color: chartreuse;
+}
+
+#experiences p span {
+    color: #1f9cf0;
+}
+
+#contact a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
 }
