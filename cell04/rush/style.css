@@ -12,10 +12,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 15px;
+    padding: 20px 15px;
     font-size: 17px;
     font-weight: bold;
     color: white;
+}
+
+.navbar a:hover {
+    color: #1f9cf0;
 }
 
 #hero {
@@ -23,11 +27,12 @@ header {
     height: 100vh;
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url(https://i.pinimg.com/originals/2e/dc/06/2edc0680c0d2a34299ba46be7707b2fb.jpg);
+    /* background-color: black; */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.65;
+    opacity: 0.85;
 }
 
 #hero .hero-container {
@@ -41,5 +46,11 @@ header {
     align-items: center;
     flex-direction: column;
     padding: 0 15px;
+    color: white;
+}
+
+#about, #experiences {
+    background-color: black;
+    opacity: 0.86;
     color: white;
 }
